@@ -1,0 +1,29 @@
+<div>
+  <label for="username">UserName: 
+    <input type="text" [formControl]="username">
+  </label>
+  <label for="Email">Email: 
+    <input type="text" [formControl]="email">
+  </label>
+  <label for="password">Password: 
+    <input type="text" [formControl]="password">
+  </label>
+  <div formGroupName="address">
+  <label for="street"><br>Street:
+    <input type="text" [formControl]="street">
+  </label>
+  <label for="city">PostalCode:
+    <input type="text" [formControl]="postalCode">
+  </label>
+  <label for="city">City:
+    <input type="text" [formControl]="city">
+  </label>
+</div>
+<button (click)="onSubmit()" type="submit">validation</button>
+<div *ngIf="submit">
+  <p>{{username.value}}</p>
+  <p>{{email.value}}</p>
+  <p>{{password.value}}</p>
+  <p>{{street.value}}, {{postalCode.value}}, {{city.value}}</p>
+  </div>
+</div>
